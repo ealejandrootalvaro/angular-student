@@ -1,19 +1,24 @@
 <div class="container-fluid">
   <div class="row">
 
-    <div class="col-md-8 col-md-offset-2">
+    <div class="col-md-3">
+      <a href="#!/students" class="btn btn-info">
+        <span class="glyphicon glyphicon-th-list"></span> Back to Students list
+      </a>
+    </div>
 
-    <h1>{{$ctrl.student.name}}</h1>
-
-    <p>Years: {{$ctrl.student.yearsOld}}</p>
-
+    <div class="col-md-6">
+    <h1>Student detail</h1>
     <hr>
+    <h2>{{$ctrl.student.name}}</h2>
+
+    <p>Age: {{$ctrl.student.yearsOld}}</p>
     <h3>Grades:</h3>
     <ul ng-repeat="grade in $ctrl.student.grades">
-      <li style="color: {{ grade < 3 ? 'red' : (grade >= 3 && grade < 3.9) ? 'yellow' : 'green'  }}">{{grade}}</li>
+      <li class="{{$ctrl.getGradeClass(grade)}}">{{grade}}</li>
     </ul>
 
-    <h3>Average: {{$ctrl.student.average}}</h3>
+    <h3 class="{{$ctrl.getGradeClass($ctrl.student.average)}}">Average: {{$ctrl.student.average}}</h3>
 
     </div>
 

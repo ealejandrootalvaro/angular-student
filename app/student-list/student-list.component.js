@@ -7,6 +7,7 @@ angular.module('studentList').component('studentList', {
 
     var self = this;
 
+    //make http request asking for the student list
     $http.get('api/students').then(function(response){
       self.students = response.data;
     });

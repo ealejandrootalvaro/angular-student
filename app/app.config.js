@@ -1,3 +1,6 @@
+
+// Link routes with templates
+
 angular.
   module('pruebaApp').
   config(['$locationProvider', '$routeProvider',

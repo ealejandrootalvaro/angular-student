@@ -1,4 +1,14 @@
-body {
-  padding-top: 20px;
-}
+.grade-green {
+  color: #31B404; }
 
+.grade-yellow {
+  color: #D7DF01; }
+
+.grade-red {
+  color: #FE2E2E; }
+
+.text-center {
+  text-align: center; }
+
+.btn-info {
+  margin-top: 20px; }

@@ -3,7 +3,7 @@
 // Define the main module
 
 angular.module('pruebaApp',[
-  // Depends on the studentList module
+  // Depends on these modules
   'ngRoute',
   'studentList',
   'studentDetail'

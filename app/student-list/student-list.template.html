@@ -1,20 +1,44 @@
 
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-2">
+    <div class="col-md-">
 
-      Search: <input ng-model="$ctrl.query" />
+
 
     </div>
 
-    <div class="col-md-10">
+    <div class="col-md-6 col-md-offset-3">
 
-      <ul class="students">
-        <li ng-repeat="student in $ctrl.students | filter: $ctrl.query" >
-          <span style="color: {{student.color}}">{{student.name}} -- {{student.yearsOld}}</span> <br>
-          <a href="#!/students/{{student.id}}">Notas</a>
-        </li>
-      </ul>
+
+      <h1>Students</h1>
+
+      <div class="form-group">
+
+        <label for="">Search:</label>
+        <input type="text" ng-model="$ctrl.query" class="form-control">
+
+      </div>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th class="text-center">Grades</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr ng-repeat="student in $ctrl.students | filter: $ctrl.query" ng-show="{{student.active}}" style="color: {{student.color}}" >
+            <td>{{student.name}}</td>
+            <td>{{student.yearsOld}}</td>
+            <td class="text-center"><a href="#!/students/{{student.id}}"><span class="glyphicon glyphicon-search"></span></a></td>
+          </tr>
+        </tbody>
+
+      </table>
+
+
 
     </div>
 
