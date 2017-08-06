@@ -1,0 +1,22 @@
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+
+      Search: <input ng-model="$ctrl.query" />
+
+    </div>
+
+    <div class="col-md-10">
+
+      <ul class="students">
+        <li ng-repeat="student in $ctrl.students | filter: $ctrl.query" >
+          <span style="color: {{student.color}}">{{student.name}} -- {{student.yearsOld}}</span> <br>
+          <a href="#!/students/{{student.id}}">Notas</a>
+        </li>
+      </ul>
+
+    </div>
+
+  </div>
+</div>

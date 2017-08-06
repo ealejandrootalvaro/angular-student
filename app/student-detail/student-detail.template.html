@@ -1,0 +1,21 @@
+<div class="container-fluid">
+  <div class="row">
+
+    <div class="col-md-8 col-md-offset-2">
+
+    <h1>{{$ctrl.student.name}}</h1>
+
+    <p>Years: {{$ctrl.student.yearsOld}}</p>
+
+    <hr>
+    <h3>Grades:</h3>
+    <ul ng-repeat="grade in $ctrl.student.grades">
+      <li style="color: {{ grade < 3 ? 'red' : (grade >= 3 && grade < 3.9) ? 'yellow' : 'green'  }}">{{grade}}</li>
+    </ul>
+
+    <h3>Average: {{$ctrl.student.average}}</h3>
+
+    </div>
+
+  </div>
+</div>
